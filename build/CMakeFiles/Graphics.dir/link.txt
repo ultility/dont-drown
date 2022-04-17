@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libGraphics.a  CMakeFiles/Graphics.dir/src/Window.cpp.o CMakeFiles/Graphics.dir/src/Texture.cpp.o
+/usr/bin/ranlib ../lib/libGraphics.a

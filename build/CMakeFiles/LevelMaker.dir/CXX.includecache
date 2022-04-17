@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nadav/Desktop/game jams/dont drown/src/ICollidable.h
+SDL2/SDL.h
+-
+
+/home/nadav/Desktop/game jams/dont drown/src/Platform.cpp
+Platform.h
+/home/nadav/Desktop/game jams/dont drown/src/Platform.h
+iostream
+-
+
+/home/nadav/Desktop/game jams/dont drown/src/Platform.h
+SDL2/SDL.h
+-
+Texture.h
+/home/nadav/Desktop/game jams/dont drown/src/Texture.h
+ICollidable.h
+/home/nadav/Desktop/game jams/dont drown/src/ICollidable.h
+
+/home/nadav/Desktop/game jams/dont drown/src/Texture.h
+SDL2/SDL.h
+-
+

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libLevelMaker.a  CMakeFiles/LevelMaker.dir/src/Platform.cpp.o CMakeFiles/LevelMaker.dir/src/Level.cpp.o
+/usr/bin/ranlib ../lib/libLevelMaker.a
