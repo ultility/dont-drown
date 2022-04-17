@@ -13,7 +13,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/modules)
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 add_library(Graphics src/Window.cpp src/Texture.cpp)
-add_library(LevelMaker src/Platform.cpp src/Level.cpp src/ICollidable.)
+add_library(LevelMaker src/Platform.cpp src/Level.cpp)
 add_library(Player src/Player.cpp)
 
 

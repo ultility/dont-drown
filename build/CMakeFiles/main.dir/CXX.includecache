@@ -11,14 +11,16 @@ SDL2/SDL.h
 -
 SDL2/SDL_image.h
 -
+SDL2/SDL_timer.h
+-
 iostream
 -
 Texture.h
 /home/nadav/Desktop/game jams/dont drown/src/Texture.h
 Window.h
 /home/nadav/Desktop/game jams/dont drown/src/Window.h
-player.h
-/home/nadav/Desktop/game jams/dont drown/src/player.h
+Player.h
+/home/nadav/Desktop/game jams/dont drown/src/Player.h
 Level.h
 /home/nadav/Desktop/game jams/dont drown/src/Level.h
 
@@ -42,6 +44,16 @@ Texture.h
 ICollidable.h
 /home/nadav/Desktop/game jams/dont drown/src/ICollidable.h
 
+/home/nadav/Desktop/game jams/dont drown/src/Player.h
+SDL2/SDL.h
+-
+Texture.h
+/home/nadav/Desktop/game jams/dont drown/src/Texture.h
+Platform.h
+/home/nadav/Desktop/game jams/dont drown/src/Platform.h
+Level.h
+/home/nadav/Desktop/game jams/dont drown/src/Level.h
+
 /home/nadav/Desktop/game jams/dont drown/src/Texture.h
 SDL2/SDL.h
 -
@@ -55,14 +67,6 @@ Texture.h
 /home/nadav/Desktop/game jams/dont drown/src/Texture.h
 Level.h
 /home/nadav/Desktop/game jams/dont drown/src/Level.h
-
-/home/nadav/Desktop/game jams/dont drown/src/player.h
-SDL2/SDL.h
--
-Texture.h
-/home/nadav/Desktop/game jams/dont drown/src/Texture.h
-Window.h
-/home/nadav/Desktop/game jams/dont drown/src/Window.h
 
 /home/nadav/vcpkg/installed/x64-linux/include/SDL2/SDL.h
 SDL_main.h

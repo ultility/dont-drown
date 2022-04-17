@@ -5,9 +5,9 @@ CMakeFiles/main.dir/src/DontDrown.cpp.o: ../src/DontDrown.cpp
 CMakeFiles/main.dir/src/DontDrown.cpp.o: ../src/ICollidable.h
 CMakeFiles/main.dir/src/DontDrown.cpp.o: ../src/Level.h
 CMakeFiles/main.dir/src/DontDrown.cpp.o: ../src/Platform.h
+CMakeFiles/main.dir/src/DontDrown.cpp.o: ../src/Player.h
 CMakeFiles/main.dir/src/DontDrown.cpp.o: ../src/Texture.h
 CMakeFiles/main.dir/src/DontDrown.cpp.o: ../src/Window.h
-CMakeFiles/main.dir/src/DontDrown.cpp.o: ../src/player.h
 CMakeFiles/main.dir/src/DontDrown.cpp.o: /home/nadav/vcpkg/installed/x64-linux/include/SDL2/SDL.h
 CMakeFiles/main.dir/src/DontDrown.cpp.o: /home/nadav/vcpkg/installed/x64-linux/include/SDL2/SDL_assert.h
 CMakeFiles/main.dir/src/DontDrown.cpp.o: /home/nadav/vcpkg/installed/x64-linux/include/SDL2/SDL_atomic.h

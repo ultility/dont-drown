@@ -10,10 +10,18 @@
 SDL2/SDL.h
 -
 
-/home/nadav/Desktop/game jams/dont drown/src/Platform.cpp
+/home/nadav/Desktop/game jams/dont drown/src/Level.cpp
+Level.h
+/home/nadav/Desktop/game jams/dont drown/src/Level.h
+Player.h
+/home/nadav/Desktop/game jams/dont drown/src/Player.h
+
+/home/nadav/Desktop/game jams/dont drown/src/Level.h
 Platform.h
 /home/nadav/Desktop/game jams/dont drown/src/Platform.h
-iostream
+Texture.h
+/home/nadav/Desktop/game jams/dont drown/src/Texture.h
+list
 -
 
 /home/nadav/Desktop/game jams/dont drown/src/Platform.h
@@ -23,6 +31,16 @@ Texture.h
 /home/nadav/Desktop/game jams/dont drown/src/Texture.h
 ICollidable.h
 /home/nadav/Desktop/game jams/dont drown/src/ICollidable.h
+
+/home/nadav/Desktop/game jams/dont drown/src/Player.h
+SDL2/SDL.h
+-
+Texture.h
+/home/nadav/Desktop/game jams/dont drown/src/Texture.h
+Platform.h
+/home/nadav/Desktop/game jams/dont drown/src/Platform.h
+Level.h
+/home/nadav/Desktop/game jams/dont drown/src/Level.h
 
 /home/nadav/Desktop/game jams/dont drown/src/Texture.h
 SDL2/SDL.h

@@ -48,22 +48,16 @@ void Window::Draw(Texture texture, SDL_Rect src, SDL_Rect dst)
     SDL_Rect* dst_ptr = &dst;
     if (SDL_RectEmpty(&dst) == SDL_TRUE)
     {
-        dst_ptr = NULL;
-        std::cout << "dst is empty" << std::endl; 
+        dst_ptr = NULL;        
     }
-    /*else
-    {
-        std::cout << "dst: " << "x: " << dst.x << " width: " << dst.w << " y: " << dst.y << " height: " << dst.h << std::endl;
-    }*/
     if (SDL_RectEmpty(src_ptr) == SDL_TRUE)
     {
         src_ptr = NULL;
-        std::cout << "src is empty" << std::endl; 
     }
-    /*else 
+    else 
     {
-        //std::cout << "dst: " << "x: " << src.x << " width: " << src.w << " y: " << src.y << " height: " << src.h << std::endl;
-    }*/
+        std::cout << "src: " << "x: " << src.x << " width: " << src.w << " y: " << src.y << " height: " << src.h << std::endl;
+    }
     texture.Draw(renderer, src_ptr, dst_ptr);
 }
 

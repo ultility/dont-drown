@@ -111,16 +111,16 @@
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 6,
+			"id" : "Player::@6890427a1f51a3e7e1df"
+		},
+		{
 			"backtrace" : 7,
 			"id" : "LevelMaker::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 5,
 			"id" : "Graphics::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 6,
-			"id" : "Player::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "main::@6890427a1f51a3e7e1df",

@@ -6,9 +6,9 @@ CMakeFiles/main.dir/src/DontDrown.cpp.o
  /home/nadav/Desktop/game jams/dont drown/src/ICollidable.h
  /home/nadav/Desktop/game jams/dont drown/src/Level.h
  /home/nadav/Desktop/game jams/dont drown/src/Platform.h
+ /home/nadav/Desktop/game jams/dont drown/src/Player.h
  /home/nadav/Desktop/game jams/dont drown/src/Texture.h
  /home/nadav/Desktop/game jams/dont drown/src/Window.h
- /home/nadav/Desktop/game jams/dont drown/src/player.h
  /home/nadav/vcpkg/installed/x64-linux/include/SDL2/SDL.h
  /home/nadav/vcpkg/installed/x64-linux/include/SDL2/SDL_assert.h
  /home/nadav/vcpkg/installed/x64-linux/include/SDL2/SDL_atomic.h

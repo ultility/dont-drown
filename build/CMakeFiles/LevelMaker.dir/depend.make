@@ -5,6 +5,7 @@ CMakeFiles/LevelMaker.dir/src/Level.cpp.o: ../src/ICollidable.h
 CMakeFiles/LevelMaker.dir/src/Level.cpp.o: ../src/Level.cpp
 CMakeFiles/LevelMaker.dir/src/Level.cpp.o: ../src/Level.h
 CMakeFiles/LevelMaker.dir/src/Level.cpp.o: ../src/Platform.h
+CMakeFiles/LevelMaker.dir/src/Level.cpp.o: ../src/Player.h
 CMakeFiles/LevelMaker.dir/src/Level.cpp.o: ../src/Texture.h
 
 CMakeFiles/LevelMaker.dir/src/Platform.cpp.o: ../src/ICollidable.h

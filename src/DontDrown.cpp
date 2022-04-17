@@ -1,14 +1,22 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include <SDL2/SDL_timer.h>
 #include <iostream>
 #include "Texture.h"
 #include "Window.h"
-#include "player.h"
+#include "Player.h"
 #include "Level.h"
 
 const int DEFAULT_WINDOW_WIDTH = 640;
 const int DEFAULT_WINDOW_HEIGHT = 640;
 const int WALL_THICCNESS = 5;
+const int MAX_FPS = 60;
+
+Uint32 nextFrameCountdown(Uint32 interval, void* param)
+{
+    *(bool*)param = false;
+    return 0;
+}
 
 bool init(Window* w, int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT, std::string title = "Dont Drown")
 {
@@ -27,20 +35,25 @@ bool init(Window* w, int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WIND
     return true;
 }
 
+std::string randomTexturePath(std::string base, int amount, std::string ending)
+{
+    base += std::to_string((rand()%amount) + 1);
+    base += ending;
+    return base;
+}
+
 Level LoadLevel(Window w)
-{   std::string path = "../images/stone";
-    int random = rand()%(3-1+1) + 1;
-    path += std::to_string(random);
-    path += ".png";
+{   
+    std::string path = randomTexturePath("../images/stone", 3, ".png");
     Platform leftWall(0,0,WALL_THICCNESS, w.GetHeight(), w.MakeTexture(path.c_str()));
-    path = "../images/stone";
-    random = rand()%(3-1+1) + 1;
-    path += std::to_string(random);
-    path += ".png";
+    path = randomTexturePath("../images/stone", 3, ".png");
     Platform rightWall(w.GetWidth() - WALL_THICCNESS, 0, WALL_THICCNESS, w.GetHeight(), w.MakeTexture(path.c_str()));
+    path = randomTexturePath("../images/stone", 3, ".png");
+    Platform floor(0,w.GetHeight() - WALL_THICCNESS, w.GetWidth(), WALL_THICCNESS, w.MakeTexture(path));
     Level level1;
     level1.AddPlatform(leftWall);
     level1.AddPlatform(rightWall);
+    level1.AddPlatform(floor);
     return level1;
 }
 
@@ -50,32 +63,40 @@ int main()
     if (init(&mainWindow))
     {
         bool IsGameFinished = false;
+        bool frameLock = false;
         SDL_Event e;
         mainWindow.Show();
         Texture playerTexture = mainWindow.MakeTexture("../images/walking_stick_figure_1.png");
         Player player(mainWindow.GetWidth() / 2, mainWindow.GetHeight() / 2, 20, 50, mainWindow.MakeTexture("../images/walking_stick_figure_1.png"));
         Level currentLevel = LoadLevel(mainWindow);
         mainWindow.SetColor(255,255,255,255);
+        SDL_TimerID timerId;
         while (!IsGameFinished)
         {
-            while (SDL_PollEvent(&e))
+            if (!frameLock)
             {
-                switch (e.type)
+                timerId = SDL_AddTimer(1000/MAX_FPS, nextFrameCountdown, (void*)&frameLock);
+                frameLock = true;
+                while (SDL_PollEvent(&e))
                 {
-                    case SDL_EventType::SDL_QUIT:
-                        IsGameFinished = true;
-                        //SDL_SetRenderDrawColor(mainWindow.renderer, 255, 255,255,255);
-                        break;
-                    case SDL_EventType::SDL_KEYDOWN:
-                        player.HandleInput(e);
-                    default:
-                        break;
+                    switch (e.type)
+                    {
+                        case SDL_EventType::SDL_QUIT:
+                            IsGameFinished = true;
+                            break;
+                        case SDL_EventType::SDL_KEYDOWN:
+                        case SDL_EventType::SDL_KEYUP:
+                            player.HandleInput(e);
+                        default:
+                            break;
+                    }
                 }
+                player.Update(currentLevel);
+                mainWindow.DrawRect();
+                player.Draw(mainWindow);
+                mainWindow.DrawLevel(currentLevel);
+                mainWindow.FrameReady();
             }
-            mainWindow.DrawRect();
-            player.Draw(mainWindow);
-            //mainWindow.DrawLevel(currentLevel);
-            mainWindow.FrameReady();
         }
         
     }

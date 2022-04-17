@@ -1,4 +1,5 @@
 #include "Level.h"
+#include "Player.h"
 
 const std::list<Platform> Level::GetLevelLayout()
 {
@@ -36,4 +37,17 @@ bool Level::RemovePlatform(Platform p)
         }
     }
     return false;
+}
+
+std::list<Platform> Level::GetColliding(Player p)
+{
+    std::list<Platform> colliding;
+    for (auto it = blocks.begin(); it != blocks.end(); it++)
+    {
+        if (p.IsColliding(*it))
+        {
+            colliding.push_back(*it);
+        }
+    }
+    return colliding;
 }

@@ -3,7 +3,7 @@
 #include "Texture.h"
 #include "ICollidable.h"
 
-class Platform : ICollidable
+class Platform : public ICollidable
 {
     public:
         void Draw(SDL_Renderer* renderer) const;
@@ -12,7 +12,6 @@ class Platform : ICollidable
         void SetTexture(Texture texture);
         friend bool operator==(const Platform& p1, const Platform& p2);
     private:
-        SDL_Rect bounds;
         Texture texture;
         int timeOfCreation;
 };

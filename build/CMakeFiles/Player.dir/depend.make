@@ -5,7 +5,7 @@ CMakeFiles/Player.dir/src/Player.cpp.o: ../src/ICollidable.h
 CMakeFiles/Player.dir/src/Player.cpp.o: ../src/Level.h
 CMakeFiles/Player.dir/src/Player.cpp.o: ../src/Platform.h
 CMakeFiles/Player.dir/src/Player.cpp.o: ../src/Player.cpp
+CMakeFiles/Player.dir/src/Player.cpp.o: ../src/Player.h
 CMakeFiles/Player.dir/src/Player.cpp.o: ../src/Texture.h
 CMakeFiles/Player.dir/src/Player.cpp.o: ../src/Window.h
-CMakeFiles/Player.dir/src/Player.cpp.o: ../src/player.h
 
